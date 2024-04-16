@@ -33,7 +33,7 @@ public class FirebaseDatabaseConfig {
 			try {
 				serviceAccount = new FileInputStream("src/main/resources/serviceAccountKey.json");
 				options = new FirebaseOptions.Builder().setServiceAccount(serviceAccount)
-			    	    .setDatabaseUrl("https://vagasjunior-5bdf7-default-rtdb.firebaseio.com/")
+			    	    .setDatabaseUrl(options.getDatabaseUrl())
 			    	    .build();
 				FirebaseApp.initializeApp(options);
 				//databaseFb = FirestoreClient.getFirestore();
