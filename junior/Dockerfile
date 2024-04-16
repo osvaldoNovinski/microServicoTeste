@@ -9,14 +9,15 @@ WORKDIR /app
 # Copie o arquivo pom.xml para o diretório de trabalho
 COPY pom.xml ./pom.xml
 
+COPY resources ./resources
+COPY path/to/serviceAccountKey.json /app/serviceAccountKey.json
 # Resolva as dependências e faça o cache delas
 RUN mvn dependency:resolve
 
 # Copie o código-fonte do projeto
 COPY src ./src
 
-COPY resources ./resources
-COPY path/to/serviceAccountKey.json /app/serviceAccountKey.json
+
 
 
 # Compile o projeto
