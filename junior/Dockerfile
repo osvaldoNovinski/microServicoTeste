@@ -18,7 +18,7 @@ RUN mvn dependency:resolve
 COPY src ./src
 
 #COPY resources ./resources
-COPY src/main/resources/serviceAccountKey.json ./resources/serviceAccountKey.json
+COPY src/main/resources/serviceAccountKey.json ./main/resources/serviceAccountKey.json
 
 
 # Compile o projeto
